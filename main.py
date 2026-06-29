@@ -7,6 +7,7 @@ from src.analyze import analyze_data
 from src.analyze import sort_data
 from src.analyze import group_data
 from src.report import generate_report
+from src.top_students import top_students
 
 def menu():
     print("\n========== Student Data Analysis ==========")
@@ -19,9 +20,11 @@ def menu():
     print("7. Sort Dataset")
     print("8. Group Data")
     print("9. Generate Report")
-    print("10. Run Complete Project")
+    print("10. Top 10 Students")
+    print("11. Run Complete Project")
     print("0. Exit")
 
+df = None
 while True:
     menu()
     choice = int(input("Enter your choice: "))
@@ -83,8 +86,14 @@ while True:
             else:
                 generate_report(df)
                 print("Report generated")
-
+        
         case 10:
+            if df is None:
+                print("Please load the dataset first.")
+            else:
+                top_students(df)
+
+        case 11:
             df = load_data()
             inspect_data(df)
             df = clean_data(df)
