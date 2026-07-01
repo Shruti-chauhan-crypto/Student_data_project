@@ -43,7 +43,13 @@ Student_Data_Project/
 │   ├── filter_data.py
 │   ├── analyze.py
 │   └── report.py
+│   └── visualize.py
 │
+├── visualize/
+│   └── attendance_distribution.png
+│   └── average_marks_by_grade.png
+│   └── grade_distribution.png
+│   └── pass_vs_fail.png
 ├── main.py
 └── README.md
 ```
@@ -83,6 +89,12 @@ This project helped in learning:
 - Grouping
 - CSV File Handling
 - Python Functions and Project Structure
+
+## Bonus Assessment
+
+- Add visualization using matplotlib
+- Create menu-driven application
+- Display Top-10 students
 
 ## Author
 
